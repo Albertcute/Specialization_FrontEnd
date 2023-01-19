@@ -1,0 +1,15 @@
+
+
+<div class="title">
+    <h1>{{title}}</h1>
+    <h2>𝑻𝒉𝒊𝒔 𝒊𝒔 𝒎𝒚 𝑭𝒊𝒓𝒔𝒕 𝑨𝒏𝒈𝒖𝒍𝒂𝒓 𝑷𝒓𝒐𝒋𝒆𝒄𝒕</h2>
+
+
+
+<div class="score"><b>{{score}}</b>{{inputValue}}
+</div>
+<div class="addsub">
+    <app-add (addStringData)="RecieveData($event)" (click)="recieveAdd()"></app-add> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <app-subtract (subtractStringData)="RecieveData($event)" (click)="recieveSubtract()"></app-subtract>
+</div>
+</div>
