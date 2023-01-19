@@ -4,33 +4,16 @@
 </div>
 <!--
 how to create form with data driven forms -->
-<!--
-<div *ngIf="!isAddTask">
-  <h2>Tasks List</h2>
-  <button (click)="addNewTask()">Add New Tasks</button><br><br>
 
-  <div *ngFor="let task of taskList">
-    <app-task [taskIn]="task"></app-task>
+<div *ngIf="!isAddStudent">
+  <h2>Students List</h2>
+  <button (click)="addNewStudent()">Add New Students</button>
+
+  <div *ngFor="let student of studentsList">
+    <app-student [studentIn]="student"></app-student>
   </div>
 </div>
 
-<div *ngIf="isAddTask">
-  <app-add-task (taskOut)="addTask($event)"></app-add-task>
-</div> -->
-
-
-
-
-<!-- 19/01/23 -->
-
-
-<nav>
-  <ul>
-    <li><a routerLink="/first-component">First Component</a></li>
-    <li><a routerLink="/second-component">Second Component</a></li>
-    <li><a routerLink="/third-component">Third Component</a></li>
-    <li><a routerLink="/fourth-component">Fourth Component</a></li>
-  </ul>
-</nav>
-
-<router-outlet></router-outlet>
+<div *ngIf="isAddStudent">
+  <app-add-student (studentOut)="addStudent($event)"></app-add-student>
+</div>

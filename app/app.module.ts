@@ -1,42 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-// 19/01/23
-import { HttpClientModule} from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddTaskComponent } from './add-task/add-task.component';
-import { TaskComponent } from './task/task.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
-import { FourthComponent } from './fourth/fourth.component';
+import { StudentComponent } from './student/student.component';
+import { AddStudentComponent } from './add-student/add-student.component';
 
-
+// how to create form with data driven forms
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddTaskComponent,
-    TaskComponent,
     FirstComponent,
     SecondComponent,
-    ThirdComponent,
-    FourthComponent
+    StudentComponent,
+    AddStudentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-// 19/01/23
-    HttpClientModule
+// how to create form with data driven forms
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule { }
