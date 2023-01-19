@@ -1,0 +1,19 @@
+<!-- how to create form with data driven forms -->
+<div class="task">
+<br>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add New Task</h3>
+
+
+
+
+<form [formGroup]="taskForm" (ngSubmit)="addTask()">
+  <label for="name">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" id="name" formControlName="name"> <br><br>
+  <label for="name">Description </label>
+  <input type="text" id="description" formControlName="description"> <br><br>
+  <label for="name">AssignTo &nbsp;&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" id="assign" formControlName="assign"> <br><br>
+  <button type="submit">Add Task</button> <br> <br>
+</form>
+</div>
+
