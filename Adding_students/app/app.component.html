@@ -1,0 +1,19 @@
+<div>
+  <h1>{{title}}</h1>
+  <h2>This is my First Angular Project</h2>
+</div>
+<!--
+how to create form with data driven forms -->
+
+<div *ngIf="!isAddStudent">
+  <h2>Students List</h2>
+  <button (click)="addNewStudent()">Add New Students</button>
+
+  <div *ngFor="let student of studentsList">
+    <app-student [studentIn]="student"></app-student>
+  </div>
+</div>
+
+<div *ngIf="isAddStudent">
+  <app-add-student (studentOut)="addStudent($event)"></app-add-student>
+</div>
