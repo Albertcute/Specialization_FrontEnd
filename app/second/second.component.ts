@@ -1,5 +1,7 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-
+import { Component } from '@angular/core';
+// 19/01/23
+import { HttpService } from '../http.service';
+import { Album } from '../album';
 
 @Component({
   selector: 'app-second',
@@ -7,10 +9,17 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent {
-  // @Output() secondOutput = new EventEmitter();
 
-  // passEvent(){
-  //   this.secondOutput.emit();
-  // }
+  albums!: Album[]
+  constructor(private httpService: HttpService){}
+  ngOnInit(){
+    // console.log('first component');
+
+    this.httpService.getData('https://jsonplaceholder.typicode.com/albums')
+    .subscribe(data => {
+      // console.table(data);
+      this.albums = data as Album[];
+    })
+  }
 
 }

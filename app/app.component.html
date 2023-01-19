@@ -1,15 +1,36 @@
-
-
-<div class="title">
-    <h1>{{title}}</h1>
-    <h2>𝑻𝒉𝒊𝒔 𝒊𝒔 𝒎𝒚 𝑭𝒊𝒓𝒔𝒕 𝑨𝒏𝒈𝒖𝒍𝒂𝒓 𝑷𝒓𝒐𝒋𝒆𝒄𝒕</h2>
-
-
-
-<div class="score"><b>{{score}}</b>{{inputValue}}
+<div>
+  <h1>{{title}}</h1>
+  <h2>This is my First Angular Project</h2>
 </div>
-<div class="addsub">
-    <app-add (addStringData)="RecieveData($event)" (click)="recieveAdd()"></app-add> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <app-subtract (subtractStringData)="RecieveData($event)" (click)="recieveSubtract()"></app-subtract>
+<!--
+how to create form with data driven forms -->
+<!--
+<div *ngIf="!isAddTask">
+  <h2>Tasks List</h2>
+  <button (click)="addNewTask()">Add New Tasks</button><br><br>
+
+  <div *ngFor="let task of taskList">
+    <app-task [taskIn]="task"></app-task>
+  </div>
 </div>
-</div>
+
+<div *ngIf="isAddTask">
+  <app-add-task (taskOut)="addTask($event)"></app-add-task>
+</div> -->
+
+
+
+
+<!-- 19/01/23 -->
+
+
+<nav>
+  <ul>
+    <li><a routerLink="/first-component">First Component</a></li>
+    <li><a routerLink="/second-component">Second Component</a></li>
+    <li><a routerLink="/third-component">Third Component</a></li>
+    <li><a routerLink="/fourth-component">Fourth Component</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

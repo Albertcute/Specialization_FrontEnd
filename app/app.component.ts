@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Task } from './task';
 
 @Component({
   selector: 'app-root',
@@ -6,23 +7,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularProject_Albert';
-  score = 'Score: '
-  inputValue = 0;
-  addDataRecieved : string = "";
+  title = 'Specialization';
+  isAddTask = false;
+  taskList: Task[] = [
+    {
+      id:0,
+      name: "Washing",
+      description: "Manually wash the clothes",
+      assign: "Albert"
 
+    },
+    {
+    id: 1,
+    name: "Swipping",
+    description: "Manually swip the floor",
+    assign: "James"
 
-
-  recieveAdd(){
-    this.inputValue++;
+  },
+  {
+    id:2,
+    name: "Grooming",
+    description: "Groom the grass  on the lawn",
+    assign: "Hannah"
   }
-  recieveSubtract(){
-    this.inputValue--;
+
+  ]
+  // how to create form with data driven forms
+  addTask(task: Task){
+    // console.log(student);
+    this.taskList.push(task);
+    this.isAddTask = false;
   }
 
-  RecieveData(event: string){
-    console.log(event);
-    this.addDataRecieved = event;
+  addNewTask(){
+    this.isAddTask = true;
+
 
   }
 
